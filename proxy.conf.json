@@ -1,0 +1,18 @@
+{
+  "/repository": {
+    "target": "https://6rxq6tob86.execute-api.us-east-1.amazonaws.com/cicd",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  },
+  "/build": {
+    "target": "https://6rxq6tob86.execute-api.us-east-1.amazonaws.com/cicd",
+    "secure": true,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/api": ""
+    }
+  }
+}

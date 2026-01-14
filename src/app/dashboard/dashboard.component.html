@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="dashboard">
+    <div class="filter">
+      <mat-form-field appearance="outline" class="filter-input">
+        <mat-label>Filtrar Repositorios</mat-label>
+        <input matInput type="text" [(ngModel)]="value" (ngModelChange)="filterData()">
+      </mat-form-field>
+    </div>
+    <div class="list-repo">
+      @for (repo of temp; track trackByRepoId) {
+        <app-card-repository [repositoryDetail]="repo" [params]="params"></app-card-repository>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+.branches{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list-branches{
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  justify-items: flex-start;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.actions{
+  width: 70%;
+  height: auto;
+  .actions-input{
+    width: 100%;
+  }
+  .actions-button{
+    width: 100%;
+    color: white !important;
+    height: 3rem;
+    border-radius: 1rem;
+  }
+}
+
+.success-button{
+  background-color: #4FBFA5;
+  color: #1F5E54;
+}
+
+.failed-button{
+  background-color: #E07A6B;
+  color: #7A2E27;
+}
+
+.pending-button{
+  background-color: #BFC7C9;
+  color: #3E4A4D;
+}
+
+.link-button{
+  background-color: #BFC7C9;
+  color: #3E4A4D;
+}
+
+.actions-component{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}

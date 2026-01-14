@@ -1,0 +1,38 @@
+.repository{
+  width: 100%;
+  height: 4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background: #212121;
+  transition: .3s;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: white;
+  padding: 0 1.5rem;
+}
+
+.repository:hover{
+  //background: #00aced;
+  background: rgba(#191919, 0.45);
+  color: white;
+  font-weight: 500;
+  letter-spacing: .5px;
+}
+
+.success-button{
+  background-color: #4FBFA5;
+  color: #1F5E54;
+}
+
+.failed-button{
+  background-color: #E07A6B;
+  color: #7A2E27;
+}
+
+.pending-button{
+  background-color: #BFC7C9;
+  color: #3E4A4D;
+}

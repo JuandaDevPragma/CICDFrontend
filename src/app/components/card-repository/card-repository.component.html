@@ -1,0 +1,23 @@
+
+  <div class="repository" (click)="navigate()">
+    <span class="repository-name">{{repositoryDetail.props.app}}</span>
+
+    @switch (repositoryDetail.props.stage){
+      @case (1){
+        <button class="success-button" mat-mini-fab>
+          <mat-icon class="material-symbols-outlined">cloud_done</mat-icon>
+        </button>
+      }
+      @case (2){
+        <button class="failed-button" mat-mini-fab>
+          <mat-icon class="material-symbols-outlined">cloud_alert</mat-icon>
+        </button>
+      }
+      @case (3){
+        <button class="pending-button" mat-mini-fab>
+          <mat-icon class="material-symbols-outlined">cloud_sync</mat-icon>
+        </button>
+      }
+    }
+  </div>
+

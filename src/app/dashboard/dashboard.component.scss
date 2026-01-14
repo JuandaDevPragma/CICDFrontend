@@ -1,0 +1,27 @@
+.dashboard{
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.list-repo{
+  width: 70%;
+  height: auto;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  justify-items: flex-start;
+  flex-direction: column;
+  gap: .85rem;
+}
+
+.filter{
+  width: 70%;
+  height: auto;
+  .filter-input{
+    width: 100%;
+  }
+}

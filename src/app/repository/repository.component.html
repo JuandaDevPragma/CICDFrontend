@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="branches">
+    <div class="actions">
+      <mat-form-field appearance="outline" class="actions-input">
+        <mat-label>Selecciona La Rama</mat-label>
+        <mat-select [formControl]="BranchFormControl" [errorStateMatcher]="matcherBranch">
+          @for (branch of repoData?.branches; track branch) {
+            <mat-option [value]="branch">{{branch}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="actions-input">
+        <mat-label>Selecciona La Cuenta</mat-label>
+        <mat-select [formControl]="AccountFormControl" [errorStateMatcher]="matcherAccount">
+          @for (account of params?.accounts; track account) {
+            <mat-option [value]="account">{{account}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="actions-input">
+        <mat-label>Selecciona La Region</mat-label>
+        <mat-select [formControl]="RegionFormControl" [errorStateMatcher]="matcherRegion">
+          @for (region of params?.regions; track region) {
+            <mat-option [value]="region">{{region}}</mat-option>
+          }
+        </mat-select>
+      </mat-form-field>
+      <br>
+      <br>
+      <div class="actions-component">
+        <button mat-mini-fab class="link-button" matTooltip="Link Build">
+          <mat-icon (click)="openLink()" class="material-symbols-outlined">link</mat-icon>
+        </button>
+        @switch (state){
+          @case (1){
+            <button class="success-button" mat-mini-fab matTooltip="Run Build" (click)="pushBuild()">
+              <mat-icon class="material-symbols-outlined">hardware</mat-icon>
+            </button>
+          }
+          @case (2){
+            <button class="failed-button" mat-mini-fab matTooltip="Run Build" (click)="pushBuild()">
+              <mat-icon class="material-symbols-outlined">hardware</mat-icon>
+            </button>
+          }
+          @case (3){
+            <span matTooltip="Build In Process">
+              <button class="pending-button" mat-mini-fab disabled>
+                <mat-icon class="material-symbols-outlined">pending</mat-icon>
+              </button>
+            </span>
+          }
+        }
+      </div>
+    </div>
+  </div>
+</div>

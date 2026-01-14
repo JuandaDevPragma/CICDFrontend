@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body, html, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: #202020;
+}
+
+.mat-mdc-snack-bar-container {
+  /* Default styles for all custom snackbars */
+  --mdc-snackbar-supporting-text-color: #fff; /* Text color */
+  --mat-mdc-snack-bar-button-color: #fff; /* Action button color */
+}
+
+.snackbar-error {
+  --mdc-snackbar-container-color: #9a2626; /* Error background color (red) */
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.snackbar-success {
+  --mdc-snackbar-container-color: #238a00; /* Error background color (red) */
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
